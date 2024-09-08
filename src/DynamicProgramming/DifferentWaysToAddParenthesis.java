@@ -1,9 +1,7 @@
 package DynamicProgramming;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 public class DifferentWaysToAddParenthesis {
     public List<Integer> solve(String exp){
@@ -19,7 +17,7 @@ public class DifferentWaysToAddParenthesis {
 
 
     private List<Integer> getResultOfExpression(String exp, int start, int end, List<List<List<Integer>>> dp){
-        if((dp.get(start).get(end).size() > 0)) return dp.get(start).get(end);
+        if((!dp.get(start).get(end).isEmpty())) return dp.get(start).get(end);
 
         int num = 0;
         boolean isOperatorPresent = false;
